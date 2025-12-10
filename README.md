@@ -1,16 +1,84 @@
-# React + Vite
+# HR Workflow Designer 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A powerful, modern, drag-and-drop workflow builder tailored for HR processes. Built with **React**, **React Flow**, and **Ant Design**.
 
-Currently, two official plugins are available:
+![Status](https://img.shields.io/badge/Status-Completed-success)
+![React](https://img.shields.io/badge/React-19-blue)
+![Vite](https://img.shields.io/badge/Vite-6.0-purple)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## React Compiler
+### 1. **Visual Workflow Builder**
+- **Drag & Drop Interface**: Easily drag nodes from the sidebar onto the infinite canvas.
+- **Smart Connections**: Connect nodes with beautiful, legible, curriculum-style lines.
+- **Modern UI**: Dark/Light mode compatible aesthetics with rounded nodes and smooth shadows.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. **Custom Node Types**
+- **🟢 Start Node**: The entry point of every workflow.
+- **🔵 Task Node**: Represents a human task (Assignee, Due Date support).
+- **🟣 Approval Node**: For manager reviews (Role-based, Auto-approve thresholds).
+- **🟠 Automated Node**: System actions (fetches available options from a Mock API).
+- **🔴 End Node**: The terminal point of the process.
 
-## Expanding the ESLint configuration
+### 3. **Real-Time Configuration**
+- **Settings Drawer**: Click any node to open a dynamic settings panel.
+- **Instant Updates**: Changes in the form (e.g., changing a task name) reflect immediately on the canvas node.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 4. **Simulation & Validation**
+- **Run Simulation**: Validates the workflow logic (e.g., checks for Start/End nodes).
+- **Mock API**: Simulates backend fetching for automation options.
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework**: [React](https://react.dev/) (Vite)
+- **Workflow Engine**: [React Flow (Carets)](https://reactflow.dev/)
+- **UI Component Library**: [Ant Design (antd)](https://ant.design/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
+- **Icons**: Ant Design Icons
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Shreshtha03/HR-Workflow-Designer-Module-React-React-Flow-.git
+   cd hr-workflow-designer
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run Development Server**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+## 📂 Project Structure
+
+```
+src/
+├── api/             # Mock API services
+├── components/      
+│   ├── forms/       # Node configuration forms (Drawer content)
+│   ├── nodes/       # Custom React Flow Node components
+│   └── WorkflowCanvas.jsx  # Main canvas logic
+├── layout/          # MainLayout, Sidebar, Header
+├── store/           # Zustand store (Global state)
+└── utils/           # Helper functions
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+*Built with ❤️ by Shreshtha*
