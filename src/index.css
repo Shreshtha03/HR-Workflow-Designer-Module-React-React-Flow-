@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+/* Custom Cursor and Handle Styles - Modern Blue Theme */
+.react-flow__handle {
+  width: 12px;
+  height: 12px;
+  background-color: #3b82f6;
+  /* Blue handles */
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: crosshair !important;
+  transition: all 0.2s ease;
+}
+
+.react-flow__handle:hover {
+  background-color: #2563eb;
+  transform: scale(1.2);
+}
+
+/* Ensure connection interaction shows crosshair cursor */
+.react-flow__pane {
+  cursor: default;
+}
+
+/* When dragging a connection */
+.react-flow__connection-path {
+  stroke: #3b82f6 !important;
+  stroke-width: 2px;
+  stroke-dasharray: 5, 5;
+}
+
+/* Finished Edge Path */
+.react-flow__edge-path {
+  stroke: #3b82f6 !important;
+  stroke-width: 2px;
+  stroke-dasharray: 5, 5;
+}
